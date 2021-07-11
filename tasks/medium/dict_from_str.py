@@ -11,4 +11,16 @@
     ...
 }
 """
+
+from typing import Optional
+
 STR_VAL = 'python is the fastest-growing major programming language'
+
+
+def dict_from_str(new_str: Optional[str]) -> dict:
+    new_str = new_str.replace(' ', '')
+    dict_1 = {key: new_str.count(key) for key in new_str}
+    return dict_1
+
+
+print(dict_from_str(STR_VAL))

@@ -19,3 +19,11 @@ next(tn_gen) -> 10
 next(tn_gen) -> 15
 next(tn_gen) -> 21
 """
+
+import math
+
+
+def triangular_numbers(number=1) -> int:
+    while number > 0:
+        yield math.floor(1 / 2 * number * (number + 1))
+        number += 1

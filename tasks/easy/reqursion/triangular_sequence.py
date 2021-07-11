@@ -24,3 +24,12 @@ n = 6:
 55555
 666666
 """
+
+
+def triangular_sequence(n: int, multiply=1) -> int:
+    if multiply <= n:
+        print(str(multiply) * multiply)
+        triangular_sequence(n, multiply=multiply + 1)
+
+
+triangular_sequence(11)

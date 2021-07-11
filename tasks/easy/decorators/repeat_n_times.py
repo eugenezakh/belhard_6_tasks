@@ -4,17 +4,19 @@
 Декоратор должен выполнить функцию bang n раз
 """
 
+
 def repeat_n_times(n: int):
     def decorator(func):
         def wrapper(*args, **kwargs):
-            for _ in range(7):
+            for _ in range(n):
                 func(*args, **kwargs)
         return wrapper
     return decorator
 
 
-@repeat_n_times(7)
+@repeat_n_times(6)
 def bang():
     print("Boom")
+
 
 bang()
