@@ -88,3 +88,6 @@ def beef():
 @salad
 def chicken():
     print("|||| курица ||||")
+
+beef()
+chicken()
